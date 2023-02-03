@@ -111,7 +111,7 @@
     "start": "node index.js",
     "test": "npm run build && npm run instrument && nyc --reporter=none ava --config ava.config.js && nyc report --reporter=html --reporter=text && npm run typetest",
     "static": "eslint index.js lib src test",
-    "build": "git config --global url.'https://'.insteadOf git:// && gulp && nodecg install https://github.com/Rodrigo-Mirage/arena-mh",
+    "build": "gulp && nodecg install https://github.com/Rodrigo-Mirage/arena-mh",
     "instrument": "nyc instrument ./src ./instrumented && node test/helpers/retarget-browser-coverage.js",
     "release": "npm run build && npm test && standard-version --commit-all",
     "typetest": "cd typetest/fake-bundle && npm i && npm run build"
