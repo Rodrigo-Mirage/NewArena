@@ -8,7 +8,7 @@ COPY . /usr/src/app/
 
 # Install dependencies
 RUN npm install --production
-RUN npm build
+RUN npm run build
 # The command to run
 EXPOSE 5555
 CMD ["node", "index.js"]
