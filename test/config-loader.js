@@ -39,7 +39,7 @@ test('should validate the "ssl" object when "ssl.enabled" is "true"', t => {
 test('should load defaults when the config file does not exist', t => {
 	const result = loadConfig('');
 	t.is(result.config.host, '0.0.0.0');
-	t.is(result.config.port, 9090);
+	t.is(result.config.port, 8080);
 });
 
 test('should not have any whitelisted nor blacklisted bundles by default', t => {
